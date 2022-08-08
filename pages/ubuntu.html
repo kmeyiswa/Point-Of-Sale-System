@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--- Bootstrap CSS-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>JavaScript</title>
+
+
+   
+    <link rel="stylesheet" href="../style.css">
+
+
+    <base target="_top">
+    
+
+  </head>
+   <body>
+
+
+
+    <!-- POS PAGE -->
+    
+    <div class="page2_id1" id="page2_id1">
+      <div class="p-2" id="first_col_section"> <!-- Background --->
+
+        <!-- SEARCHBAR  -->
+        <div class="col-sm-6 px-3 pt-1 pb-5 product-search" id="search_input_div">
+                  <input type="search" onkeyup="searchProducts()" class="form-control autocomplet-input" id="search_item" placeholder="Search All Products">
+        </div> 
+
+
+        <div class="row bg-light mx-0  pb-2" id="main_row"> <!-- main row --->
+            
+
+            <div class="col-sm-12"> <!-- (start) col 1 --->
+
+                <!--============= [START] NAVBAR  SECTION ===================-->
+                <div class="card" id="main_nav_bar"> <!-- [Ubuntu] [Rock] [Agrico] nav bars -->
+                
+                    <div class="card-body pb-0 p-2 pt-1">
+  
+                      <ul class="nav nav-pills d-flex justify-content-between bd-highlight" id="pills-tab" role="tablist">
+  
+                              <!-- [START] Burger Menu --->
+                              <li class="d-none ms-0 mt-1 nav-item bd-highlight"> 
+  
+                                  <div class="container-fluid p-0" id="my_offcanvas">
+                                  
+                                  <button class="nav-link navButton ms-2 mc-1 ps-1 px-2 py-1" id="burger_menu_button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"> 
+                                      <!--dark-white-inner icon-->
+                                      <img src="https://cdn-icons-png.flaticon.com/512/3388/3388797.png" style="width:25px"> 
+                                      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                                      </svg>
+                                  </button>
+                                  <div class="offcanvas offcanvas-top" style="width: 280px; height: 50%;" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                      <div class="offcanvas-header">
+                                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                                      <button type="button" id="offcanvas_button_id" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                      </div>
+  
+                                      <div class="offcanvas-body">
+  
+                                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+  
+                                          <li class="nav-item bd-highlight" role="presentation"> 
+                                          <a class="nav-link py-1" onclick="href = '#index.html'" data-bs-dismiss="offcanvas" href="#pills-all">All</a>
+                                          </li>
+  
+  
+                                          <li class="nav-item bd-highlight" role="presentation"> 
+                                          <a class="nav-link py-1" onclick="go_to_agrico_tab()" data-bs-dismiss="offcanvas" href="#pills-agrico">Agrico</a>
+                                          </li>
+  
+  
+                                          <li class="nav-item bd-highlight" role="presentation"> 
+                                          <a class="nav-link py-1" onclick="href = '#ubuntu.html'" data-bs-dismiss="offcanvas" href="#pills-ubuntu">Ubuntu</a>
+                                          </li>
+  
+                                          <li class="nav-item bd-highlight" role="presentation"> 
+                                          <a class="nav-link py-1" onclick="go_to_rock_tab()" data-bs-dismiss="offcanvas" href="#pills-rock"> Rock </a>
+                                          </li>
+  
+                                          <li class="nav-item bd-highlight" role="presentation" hidden> 
+                                          <a class="nav-link py-1"  data-bs-dismiss="offcanvas" href="#pills-cart">Cart</a>
+                                          </li>
+  
+  
+                                          <li class="nav-item bd-highlight" role="presentation"> 
+                                          <a class="nav-link py-1" onclick="go_to_orders_tab()" data-bs-dismiss="offcanvas" href="#pills-orders">Orders</a>
+                                          </li>
+  
+                                          <li class="nav-item bd-highlight" role="presentation" hidden> 
+                                          <a class="nav-link py-1" onclick="go_to_laters_tab()" data-bs-dismiss="offcanvas" href="#pills-laters">Laters</a>
+                                          </li>
+  
+                                          <li class="nav-item dropdown" hidden>
+                                          <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                              Dropdown Items
+                                          </a>
+                                          <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                              <li><a class="dropdown-item" href="#">Action</a></li>
+                                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                                              <li>
+                                              <hr class="dropdown-divider">
+                                              </li>
+                                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                          </ul>
+                                          </li>
+  
+                                          <li>
+                                          <button class="btn btn-outline-dark mt-5" id="logout_button_id" value="Back to Main Menu" onclick="Back()"> Logout </button>
+                                          </li>
+                                      </ul>
+                                      
+                                      </div>
+                                  </div>
+                                  </div>
+  
+                              </li>
+                              <!-- [END] Burger Menu --->
+                              
+                              <!-- All --->
+                              <li class="nav-item bd-highlight" role="presentation">  
+                                   <a class="nav-link navButton active" href = '../index.html' id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true"> <img src="../images/icons/menuIcon.png" style="width:25px"> <span class="nav_icon_name"> All </span></a>
+                              </li>
+  
+                              <!-- Agrico --->
+                              <li class="nav-item bd-highlight" role="presentation"> 
+                                  <a class="nav-link navButton" href='agrico.html' id="pills-agrico-tab" data-bs-toggle="pill" data-bs-target="#pills-agrico" type="button" role="tab" aria-controls="pills-agrico" aria-selected="false"> 
+                                     <!--dark-white-inner icon-->
+                                    <img src="../images/icons/agricoIcon.png" style="width:25px"> 
+                                    </span> <span class="nav_icon_name"> Agrico </span></a>
+                              </li>
+                            
+                              <!-- Cart Icon --->
+                               <li class="nav-item bd-highlight mx-1 mt-1" role="presentation"> 
+  
+                                    <a type="button" id="cart_button" class="btn btn-dark position-relative navButton" id="pills-cart-tab" href="cart.html" data-bs-toggle="pill" data-bs-target="#pills-cart" type="button" role="tab" aria-controls="pills-cart" aria-selected="false"> <span id="cart_total"> R </span>
+                                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart_item_number">
+                                      0
+                                      
+                                      </a>
+                              </li>
+  
+                              <!-- Ubuntu --->
+                              <li class="nav-item bd-highlight" role="presentation"> 
+                                  <a class="nav-link navButton" href = 'ubuntu.html' id="pills-ubuntu-tab" data-bs-toggle="pill" data-bs-target="#pills-ubuntu" type="button" role="tab" aria-controls="pills-ubuntu" aria-selected="false"> 
+                                    <!--dark-white-inner icon-->
+                                    <img src="../images/icons/ubuntuIcon.png" style="width:25px"> 
+                                    </span> <span class="nav_icon_name"> Ubuntu </span> </a>
+                              </li>
+  
+                               <!-- Rock --->
+                               <li class="nav-item bd-highlight" role="presentation">
+                                  <a class="nav-link navButton" href="rock.html" id="pills-rock-tab" data-bs-toggle="pill" data-bs-target="#pills-rock" type="button" role="tab" aria-controls="pills-rock" aria-selected="false"> 
+                                    <!--dark-white-inner icon -->
+                                    <img src="../images/icons/rockIcon.png" style="width:25px"> 
+                                    </span> <span class="nav_icon_name"> Rock </span> </a>
+                              </li>
+                              
+  
+                      </ul>
+  
+                      </div>
+                  </div>
+                  <!--============= [END] NAVBAR  ===================-->
+
+
+                <!--============= [START] Products Section ========================--->
+                <div class="tab-content" id="pills-tabContent"> 
+
+                    <!-- Ubuntu Products Tab --->
+                  <div class="tab-pane show active fade" id="pills-ubuntu" role="tabpanel" aria-labelledby="pills-ubuntu-tab"> <!--Ubuntu GRID 1,2,3,4,5,6,7-->
+                    
+                    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 products_grid_list" id="ubuntu_products_grid_list">
+
+
+                      <!-- PRODUCT 1 -->
+                      <div class="col mt-3">
+                        <div class="card">
+                            <img class="card-img-top" alt="..." onclick="clickedAProduct()" src="../images/products/ubuntu/Lufuno-Homme.png" draggable="false">
+                            <div class="card-body" onclick="productDescription('Plastic', 0.99, 'https://i.ibb.co/LQDW4nK/Oxygen-Capsules.png')">
+                                <h6 class="card-title text-truncate pb-1 mb-1">Plastic</h6>
+                                <span class="d-flex justify-content-between">
+                                    <p class="card-text fw-bold bd-highlight my-0">R0.99</p>
+                                    <p class="badge bg-secondary my-0"></p>
+                                </span>
+                            </div>
+                        </div>
+                    </div> <!--div end (product 1) -->
+
+                    <!-- PRODUCT 2 -->
+                    <div class="col mt-3">
+                      <div class="card">
+                          <img class="card-img-top" alt="..." onclick="clickedAProduct()" src="../images/products/ubuntu/50ml-Dakalo-Femme-Roll-On.png" draggable="false">
+                          <div class="card-body" onclick="productDescription('Plastic', 0.99, 'https://i.ibb.co/LQDW4nK/Oxygen-Capsules.png')">
+                              <h6 class="card-title text-truncate pb-1 mb-1">Plastic</h6>
+                              <span class="d-flex justify-content-between">
+                                  <p class="card-text fw-bold bd-highlight my-0">R0.99</p>
+                                  <p class="badge bg-secondary my-0"></p>
+                              </span>
+                          </div>
+                      </div>
+                  </div> <!--div end (product 2) -->
+
+
+                  <!-- PRODUCT 3 -->
+                  <div class="col mt-3">
+                    <div class="card">
+                        <img class="card-img-top" alt="..." onclick="clickedAProduct()" src="../images/products/ubuntu/Kutetsemba-Homme.png" draggable="false">
+                        <div class="card-body" onclick="productDescription('Plastic', 0.99, 'https://i.ibb.co/LQDW4nK/Oxygen-Capsules.png')">
+                            <h6 class="card-title text-truncate pb-1 mb-1">Plastic</h6>
+                            <span class="d-flex justify-content-between">
+                                <p class="card-text fw-bold bd-highlight my-0">R0.99</p>
+                                <p class="badge bg-secondary my-0"></p>
+                            </span>
+                        </div>
+                    </div>
+                </div> <!--div end (product 3) -->
+
+                  <!-- PRODUCT 4 -->
+                  <div class="col mt-3">
+                    <div class="card">
+                        <img class="card-img-top" alt="..." onclick="clickedAProduct()" src="../images/products/ubuntu/250ml-Body-Lotion.png" draggable="false">
+                        <div class="card-body" onclick="productDescription('Plastic', 0.99, 'https://i.ibb.co/LQDW4nK/Oxygen-Capsules.png')">
+                            <h6 class="card-title text-truncate pb-1 mb-1">Plastic</h6>
+                            <span class="d-flex justify-content-between">
+                                <p class="card-text fw-bold bd-highlight my-0">R0.99</p>
+                                <p class="badge bg-secondary my-0"></p>
+                            </span>
+                        </div>
+                    </div>
+                </div> <!--div end (product 1) -->
+
+                <!-- PRODUCT 5 -->
+                <div class="col mt-3">
+                  <div class="card">
+                      <img class="card-img-top" alt="..." onclick="clickedAProduct()" src="../images/products/ubuntu/Red-Mask.png" draggable="false">
+                      <div class="card-body" onclick="productDescription('Plastic', 0.99, 'https://i.ibb.co/LQDW4nK/Oxygen-Capsules.png')">
+                          <h6 class="card-title text-truncate pb-1 mb-1">Plastic</h6>
+                          <span class="d-flex justify-content-between">
+                              <p class="card-text fw-bold bd-highlight my-0">R0.99</p>
+                              <p class="badge bg-secondary my-0"></p>
+                          </span>
+                      </div>
+                  </div>
+              </div> <!--div end (product 2) -->
+
+
+              <!-- PRODUCT 6 -->
+              <div class="col mt-3">
+                <div class="card">
+                    <img class="card-img-top" alt="..." onclick="clickedAProduct()" src="../images/products/ubuntu/Lunako-Homme.png" draggable="false">
+                    <div class="card-body" onclick="productDescription('Plastic', 0.99, 'https://i.ibb.co/LQDW4nK/Oxygen-Capsules.png')">
+                        <h6 class="card-title text-truncate pb-1 mb-1">Plastic</h6>
+                        <span class="d-flex justify-content-between">
+                            <p class="card-text fw-bold bd-highlight my-0">R0.99</p>
+                            <p class="badge bg-secondary my-0"></p>
+                        </span>
+                    </div>
+                </div>
+            </div> <!--div end (product 3) -->
+
+
+                    </div> <!--div end (products_grid_list) -->
+
+                  </div> <!--div end (tab-pane fade show active) -->
+
+                </div> <!--div end (Tab content) -->
+                <!--============= [END] Products Section ========================--->
+
+            </div> <!-- (end) col 1 --->
+
+
+           
+        </div>
+    </div>
+  </div>
+
+
+  <script src="../script.js"></script>
+
+   </body>
+</html>

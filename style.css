@@ -1,0 +1,458 @@
+/* <style> */
+
+    /*================= NAV BAR  =============*/
+      #main_nav_bar{
+        background: rgba(0,0,0,);
+        width: max-content;
+        display:block;
+        padding: 0.7rem 1.7rem;
+        z-index: 2;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 1rem;
+        display: flex;
+        gap: 0.8rem;
+        border-radius: 3rem; 
+        backdrop-filter: blur(15px);
+      }
+
+
+      .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        font-weight: 500;
+        color: #000;
+        background-color: #cceefb;
+      }
+      .navImgIcon {
+        width:10px;
+      }
+
+      #cart_disp_amount {
+        font-size:10px;
+      }
+
+      .navButton {
+        padding: 5px;
+      }
+
+        /*=============== Media Queries ======================*/
+
+            /* Small Devices [Phones] */
+            @media screen and (max-width:600px) {
+
+              .nav_icon_name {
+            display: none;
+          }
+
+            }
+            
+            /* Medium Devices [Tablets] */
+            @media screen and (max-width:1024px) {
+
+            #main_nav_bar{
+            width: 95%;
+            margin-bottom: 5px;
+          }
+
+          
+
+            }
+
+      /*================= [END] NAV BAR  =============*/
+
+
+      /*================= [START] PRODUCTS BODY  =============*/
+
+          /* SEARCHBAR  */
+          #search_item {
+            z-index: 2;
+            position: fixed;
+            width: 320px;
+
+           
+          }
+
+          /* clears the 'X' from Internet Explorer */
+          input.hide-clear[type=search]::-ms-clear,
+          input.hide-clear[type=search]::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0; 
+          }
+
+          /* clears the 'X' from Chrome */
+          input.hide-clear[type="search"]::-webkit-search-decoration,
+          input.hide-clear[type="search"]::-webkit-search-cancel-button,
+          input.hide-clear[type="search"]::-webkit-search-results-button,
+          input.hide-clear[type="search"]::-webkit-search-results-decoration {
+            display: none; 
+          }
+
+      .products_grid_list{
+        margin-bottom: 5rem;
+      }
+
+      .card-title {
+        font-size: 12px;
+      }
+
+
+      .card-img-top:hover {background-color: #3e8e41}
+
+      .card-img-top:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(20px);
+      }
+
+
+              /*================= [START] PRODUCT DESCRIPTION SECTION  =============*/
+
+                .productDesText {
+                  font-size: 13px;
+                }
+
+
+            /*================= [END] PRODUCT DESCRIPTION SECTION  =============*/
+
+
+
+
+      /*================= [END] PRODUCTS BODY  =============*/
+
+
+
+      /*================= [START] CART SECTION  =============*/
+
+        /* Small Devices [Phones] */
+            @media screen and (max-width:600px) {
+
+             #order_list {
+              height: 20vh; 
+              overflow-y: auto;
+              }
+
+              /* .cart-product-btn {
+
+              } */
+
+              .cart-product-txt {
+                font-size: 12px;
+              }
+
+              .cart-txt {
+                font-size: 13px;
+              }
+
+              .cart-btn {
+                font-size:13px;
+              }
+
+            }
+
+        /* Medium Devices [Tablets] */
+            @media screen and (max-width:1024px) {
+
+              #order_list {
+              height: 42vh; 
+              overflow-y: auto;
+              }
+
+            }
+
+      /*================= [END] CART SECTION  =============*/
+
+
+
+
+      /*================= [START] CALCULATOR SECTION  =============*/
+
+
+                /* Small Devices [Phones] */
+            @media screen and (max-width:600px) {
+              .calc_btn {
+                font-size: 11px;
+              }
+              .calc_text {
+                font-size: 10px;
+
+              }
+
+              #pay_later_toggle,
+              #card_payment_toggle,
+              #keep_the_change_toggle,
+              #collect_change_later_toggle {
+                /* height: 5px; */
+                width: 5px;
+              }
+
+            }
+
+
+            /* Medium Devices [Tablets] */
+            @media screen and (max-width:1024px) {
+
+              
+              }
+
+            
+
+
+      /*================= [END] CALCULATOR SECTION  =============*/
+
+
+      
+      
+      .autocomplete-list{
+          position: absolute;
+          top: 40px;
+          left: 1;
+          list-style-type:none;
+          margin:0;
+          
+          padding: 0;
+          background-color: #FFF;
+          width: 100%;
+          max-height: 100px;
+          overflow-y: auto;
+          z-index: 9;
+
+
+      }
+
+      .autocomplete-list li{
+          color: blue;
+          padding-top: 5px 0px 0px 0px;
+          padding-left: 15px;
+          width: calc(100%-30px);
+          font-weight: bold;
+          cursor: pointer;
+
+      }
+
+
+      .card-text{
+        overflow: hidden;
+      }
+
+      
+
+
+      #first_col_section{
+        padding-bottom: 100px;
+      }
+
+      /* @media screen and (min-width: 576px){
+         #cart_area {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding-top: 13px;
+        padding-right: 17px;
+
+              }
+          #main_nav_bar{
+            width: 65%;
+            margin-bottom: 50px;
+            margin-right: 50px;
+          }
+
+          #date_of_birth_icon {
+             display: none;
+            }
+      } */
+
+          @media screen and (min-width: 576px){
+        /* #order_list {
+      height: 42vh; 
+      overflow-y: auto;
+      } */
+      
+      #date_of_birth_icon {
+        /* display: none; */
+        height: 20px; 
+        width: 20px;
+    }
+
+    
+      
+      
+
+    }
+
+     @media screen and (max-width: 576px){
+       /* .d_none_on_mobiles, #pills-agrico-tab, #pills-all-tab, #pills-rock-tab, #pills-ubuntu-tab,
+       change_div
+        {
+         display : none;
+       } */
+
+       /* #order_list {
+      height: 50vh; 
+      overflow-y: auto;
+      } */
+
+
+
+     }
+
+      @media screen and (min-width: 576px){
+        #sale_areaId{
+          display:none;
+        }
+
+         #cart_area {
+          margin-top: 50px;
+          margin-bottom: 50px;
+
+              }
+          /* #main_nav_bar{
+            width: 95%;
+            margin-right: 50px;
+            margin-bottom: 50px;
+          } */
+
+          /* #create_customer_modal_header{ */
+            /* position: fixed; */
+             /* top: 0;
+            right: 0;
+            left: 0; */
+            /* margin: 0px 2px 5px 2px; */
+            
+            /* fixed-top mx-2 mb-5 */
+          /* } */
+
+                                          }
+
+
+      /* #cart_group{ */
+        /* margin-left:50px; */
+      /* } */
+
+      #btn-back-to-top {
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+        display: none;
+}
+
+      #page2_id1 {
+        height: 70px;
+        width: 100%;
+              }
+    .autocomplete {
+      /*the container must be positioned relative:*/
+      position: relative;
+      max-height: 150px;
+      overflow-y: auto;
+      /* display: inline-block; */
+      /* margin-left:10px; */
+    }
+
+    input {
+      border: 1px solid #d4d4d4;
+      background-color: #f1f1f1;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    #customer_nameautocomplete-list{
+      /* margin-left: 11px; */
+      padding-left: 10px;
+      padding-bottom: 5px;
+      /* border: 2px solid #6dbfb8; */
+      border-radius: 0px 0px 5px 5px;
+      background-color: #e8f0fe;
+    }
+
+    /* #order_list {
+      height: 54vh; 
+      overflow-y: auto;
+      } */
+
+   
+
+
+      
+
+
+    .form-floating input{
+      box-shadow: none;
+    }
+
+    #new_customer_button{
+      /* height: 10px; */
+      /* width: 30px; */
+      padding: 0px 5px 0px 5px;
+      margin: 0px;
+    }
+
+    #burger_menu_button{
+      /* width: 25px; */
+      /* height: 25px; */
+      padding: 0px 5px 0px 5px;
+      margin: 0px;
+    }
+
+    #cart_button{
+      /* width: 30px; */
+       padding: 0px 5px 0px 5px; 
+      margin: 0px;
+    }
+
+   
+    /*page2*/
+    .page2_class1{
+        display: none;
+      }
+
+    .page2_id1-off{
+        display:none;
+    }
+
+
+     /* ------ Loading Div Style -------- */
+            #loader {
+            border: 12px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 12px solid #444444;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+          
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+          
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+
+        .loading {
+        background-color: lightgrey;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 100000;
+      }
+
+
+
+      /* searchbar */
+
+
+
+
+    
+/* </style> */
